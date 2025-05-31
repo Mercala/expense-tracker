@@ -5,7 +5,9 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow,
 
 import warnings
 from PyQt6.QtCore import pyqtRemoveInputHook
-from .version import __version__
+from version import __version__
+
+print(f"{__version__=}")
 
 warnings.filterwarnings("ignore", category=DeprecationWarning, message=".*sipPyTypeDict().*")
 

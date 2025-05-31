@@ -11,7 +11,8 @@ from PyQt6.QtCore import Qt, QCoreApplication, QTimer
 
 def check_for_updates(current_version, parent_window=None):
     repo = "Mercala/expense-tracker"
-    api_url = f"https://api.github.com/repos/{repo}/releases/latest"
+    # api_url = f"https://api.github.com/repos/{repo}/releases/latest"
+    api_url = f"https://api.github.com/repos/{repo}/tags"
 
     try:
         response = requests.get(api_url)
