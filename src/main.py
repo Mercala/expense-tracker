@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning, message=".*sipPyT
 class ExpenseTracker(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.version = "1.0.0"  # Will be checked against GitHub releases
+        self.version = "1.0.1"  # Will be checked against GitHub releases
         self.init_ui()
 
     def init_ui(self):
