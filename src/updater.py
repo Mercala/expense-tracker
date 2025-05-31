@@ -18,7 +18,8 @@ def check_for_updates(current_version, parent_window=None):
         response = requests.get(api_url)
         if response.status_code == 200:
             latest_data = response.json()
-            latest_version = latest_data['tag_name'].lstrip('v')
+            # latest_version = latest_data['tag_name'].lstrip('v')
+            latest_version = latest_data[0]['name'].lstrip('v')
 
             if latest_version != current_version:
                 msg = QMessageBox(parent=parent_window)
